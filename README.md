@@ -40,4 +40,9 @@ bantime=10800
 > 
 > Use **bantime=-1** si desea bloquear permanente 
 
+**Reiniciar fail2ban**
+```
+sudo systemctl restart fail2ban
+```
+
 Documentación configuración en inglés [jail.conf](https://github.com/fail2ban/fail2ban/blob/master/config/jail.conf)
