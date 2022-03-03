@@ -22,7 +22,7 @@ sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
 sudo nano /etc/fail2ban/jail.local
 ```
 
-> En el apartado [sshd] o servicio que queremos proteger podemos configurar de la siguiente manera
+> En el apartado [sshd] que queremos proteger podemos configurar de la siguiente manera
 
 ```
 [sshd]
@@ -39,10 +39,24 @@ bantime = 10800
 > En nuestro ejemplo 10800 segundos = 180 minutos = 3 horas
 > 
 > Use **bantime = -1** si desea bloquear permanente 
+>
+> -1 = Permanente
+>
+> 1m = 1 minuto
+>
+> 1h = 1 hora
+>
+> 1d = 1 dia
 
 **Reiniciar fail2ban**
 ```
 sudo systemctl restart fail2ban
 ```
+
+**Ver el estado de una jaula**
+```
+sudo fail2ban-client status sshd
+```
+
 
 Documentación configuración en inglés [jail.conf](https://github.com/fail2ban/fail2ban/blob/master/config/jail.conf)
