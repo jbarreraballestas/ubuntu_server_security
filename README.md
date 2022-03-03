@@ -21,3 +21,13 @@ sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
 ```
 sudo nano /etc/fail2ban/jail.local
 ```
+
+> En el apartado [sshd] o servicio que queremos proteger podemos configurar de la siguiente manera
+
+```
+[sshd]
+maxretry = 5
+bantime=10800
+```
+
+> Donde **maxretry** es el número de intentos andes de bloquear el acceso y **bantime** el numero de segundos que durará bloqueada la dirección ip
