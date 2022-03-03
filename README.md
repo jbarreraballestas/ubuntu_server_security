@@ -37,3 +37,7 @@ bantime=10800
 > **bantime** el numero de segundos que durará bloqueada la dirección ip
 > 
 > En nuestro ejemplo 10800 segundos = 180 minutos = 3 horas
+> 
+> Use **bantime=-1** si desea bloquear permanente 
+
+Documentación configuración en inglés [jail.conf](https://github.com/fail2ban/fail2ban/blob/master/config/jail.conf)
