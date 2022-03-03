@@ -30,6 +30,9 @@ maxretry = 5
 bantime=10800
 ```
 
-> Donde **maxretry** es el número de intentos andes de bloquear el acceso y **bantime** el numero de segundos que durará bloqueada la dirección ip
->
+> Donde:
+> **maxretry** es el número de intentos andes de bloquear el acceso 
+> 
+> **bantime** el numero de segundos que durará bloqueada la dirección ip
+> 
 > En nuestro ejemplo 10800 segundos = 180 minutos = 3 horas
