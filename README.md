@@ -27,7 +27,7 @@ sudo nano /etc/fail2ban/jail.local
 ```
 [sshd]
 maxretry = 5
-bantime=10800
+bantime = 10800
 ```
 
 > Donde:
@@ -38,7 +38,7 @@ bantime=10800
 > 
 > En nuestro ejemplo 10800 segundos = 180 minutos = 3 horas
 > 
-> Use **bantime=-1** si desea bloquear permanente 
+> Use **bantime = -1** si desea bloquear permanente 
 
 **Reiniciar fail2ban**
 ```
