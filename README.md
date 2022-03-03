@@ -31,6 +31,7 @@ bantime=10800
 ```
 
 > Donde:
+> 
 > **maxretry** es el número de intentos andes de bloquear el acceso 
 > 
 > **bantime** el numero de segundos que durará bloqueada la dirección ip
