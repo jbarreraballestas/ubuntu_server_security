@@ -7,11 +7,6 @@
 sudo apt install fail2ban
 ```
 
-**Verificar el estado y las jaulas**
-```
-sudo fail2ban-client status
-```
-
 **Copiar archivo de configuración**
 ```
 sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
@@ -53,10 +48,23 @@ bantime = 10800
 sudo systemctl restart fail2ban
 ```
 
+**Ver el estado y las jaulas**
+```
+sudo fail2ban-client status
+```
+
 **Ver el estado de una jaula**
 ```
 sudo fail2ban-client status sshd
 ```
 
+**Ver si la ip 192.168.1.111 se encuentra bloqueada**
+```
+sudo fail2ban-client status sshd | grep 192.168.1.111
+```
 
+**Desbloquear una ip 192.168.1.111**
+```
+sudo fail2ban-client set sshd unbanip 192.168.1.111
+```
 Documentación configuración en inglés [jail.conf](https://github.com/fail2ban/fail2ban/blob/master/config/jail.conf)
