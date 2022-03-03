@@ -60,7 +60,7 @@ sudo fail2ban-client status sshd
 
 **Ver si la ip 192.168.1.111 se encuentra bloqueada**
 ```
-sudo fail2ban-client status sshd | grep 192.168.1.111
+sudo iptables -n -L | grep 192.168.1.111
 ```
 
 **Desbloquear una ip 192.168.1.111**
