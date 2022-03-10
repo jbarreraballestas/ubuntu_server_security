@@ -4,7 +4,7 @@
 
 **Instalar fail2ban**
 ```
-sudo apt install fail2ban
+sudo apt install fail2ban -y
 ```
 
 **Copiar archivo de configuración**
