@@ -1,5 +1,56 @@
 # Configurar la seguridad del servidor ubuntu
 
+## Acceso SSH con llave pem
+
+**Crear carpeta para la llave**
+
+```
+mkdir llavero
+```
+**Ingresar a la carpeta**
+
+```
+cd llavero
+```
+**Generar la llave**
+
+```
+ssh-keygen -b 2048 -f llave -t rsa
+```
+**Agregar la llave pública a las llaves autorizadas**
+
+```
+cat llave.pub >> ~/.ssh/authorized_keys
+```
+
+**Crear la llave privada pem**
+
+```
+cat llave > llave.pem
+```
+
+> Copie el archivo .pem al cliente
+
+**Ajustar permisos de la llave**
+
+```
+sudo chown $USER:$USER llave.pem
+sudo chmod 600 llave.pem
+```
+
+**Probar la llave de conexion**
+
+```
+ssh -i llave.pem user@host
+```
+
+**Configurar el servidor para quitar el acceso con contraseña**
+```
+sudo nano /etc/ssh/sshd_config
+```
+
+> PasswordAuthentication no
+
 ## Fail2ban
 
 **Instalar fail2ban**
