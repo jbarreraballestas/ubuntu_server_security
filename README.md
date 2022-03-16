@@ -51,6 +51,12 @@ sudo nano /etc/ssh/sshd_config
 
 > PasswordAuthentication no
 
+**Reiniciar servicio ssh**
+```
+sudo systemctl restart ssh sshd
+```
+
+
 ## Fail2ban
 
 **Instalar fail2ban**
